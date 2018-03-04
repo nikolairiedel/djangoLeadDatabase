@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # you need to start it with python manage.py runserver --insecure
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://nikolairiedel.github.io/djangoLeadDatabase/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1'
 
 
 # Application definition
