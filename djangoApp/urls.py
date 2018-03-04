@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+# Urlpatterns global to the project are set here, e.g. the path to the urls 
+# of the application leadsDatabase and the urls of the admin page.
 urlpatterns = [
     path('', include('leadsDatabase.urls')),
     path('admin/', admin.site.urls),

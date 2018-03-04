@@ -1,5 +1,6 @@
 {% extends "leadsDatabase/base.html" %}
 
+<!-- Content of the table of the current leads. -->
 {% block mainContainer %}
 
     {% if leads %}
@@ -8,6 +9,7 @@
                 <th class="leadTableHeaders">Name</th>
                 <th class="leadTableHeaders">Email adress</th>
             </tr>
+            <!-- Loops through all available leads and adds a table entry for each one. -->
             {% for lead in leads %}
                 <tr>
                     <td class="leadTableEntries">{{ lead.name_text }}</td>
@@ -18,7 +20,7 @@
     {% else %}
         <p class="leadsTable">No leads are available.</p>
     {% endif %}
-
+    <!-- Includes the buttons to add another lead or go back to the welcome page. -->
     {% include 'leadsDatabase/inputButtons.html' %}
 
 {% endblock %}

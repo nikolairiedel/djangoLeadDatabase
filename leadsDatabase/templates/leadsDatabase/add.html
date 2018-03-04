@@ -8,9 +8,9 @@
 
     <div id="formContainer">
         <form action="{% url 'leadsDatabase:addResult' %}" method="post">
-            {% csrf_token %}    
-            <label>Name: </label><input type=text name="leadName" id="leadNameInput" value="Manfred Mustermann"/><br />
-            <label>Email: </label><input type="email" name="leadEmail" id="leadEmailInput" value="manfred.mustermann@mustermann.com"/><br />
+            {% csrf_token %} <!-- Protection against Cross Site Forgery -->   
+            <label>Name: </label><input type=text name="leadName" id="leadNameInput" /><br />
+            <label>Email: </label><input type="email" name="leadEmail" id="leadEmailInput" /><br />
             <input id="inputButtonAddLead" type="submit" value="Add new lead" />
         </form>
         <form action='{% url "leadsDatabase:index" %}'>

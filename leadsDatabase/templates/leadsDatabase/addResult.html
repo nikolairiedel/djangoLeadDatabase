@@ -2,12 +2,15 @@
 
 {% block mainContainer %}
 
+    <!-- Error is set to true or false in the views.py addResult function. If true, the 
+          error message will be shown. --> 
     {% if error %}
         <div class="errorMessages">
             An error occured.<br />
             {{ errorMessage }}
         </div>
     {% else %}
+        <!-- Creates a table with the just added lead. -->
         <table class="leadsTable">
             <tr>
                 <th class="leadTableHeaders">Name</th>
@@ -19,6 +22,7 @@
             </tr>
         </table>
     {% endif %}
+    <!-- Includes the buttons to add another lead or go back to the welcome page. -->
     {% include 'leadsDatabase/inputButtons.html' %}
 {% endblock %}
 

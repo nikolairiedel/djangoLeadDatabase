@@ -1,10 +1,9 @@
-{% block mainContainer %}
-    <form action='{% url "leadsDatabase:add" %}'>
-        <input id="inputButtonAddLead"  type="submit" value="Add another lead" />
-    </form>
-    <form action='{% url "leadsDatabase:index" %}'>
-        <input id="inputButtonGoBack"  type="submit" value="Go back to main page" />
-    </form>
-{% endblock %}
+<!-- HTML of the input buttons, which are used in multiple child templates. -->
+<form action='{% url "leadsDatabase:add" %}'>
+    <input id="inputButtonAddLead"  type="submit" value="Add another lead" />
+</form>
+<form action='{% url "leadsDatabase:index" %}'>
+    <input id="inputButtonGoBack"  type="submit" value="Go back to main page" />
+</form>
         
         
