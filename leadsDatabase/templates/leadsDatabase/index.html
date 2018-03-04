@@ -1,0 +1,12 @@
+{% extends "leadsDatabase/base.html" %}
+
+{% block mainContainer %}
+
+    <div class="welcomePageLinksContainer">
+        <a class="welcomePageLinks" href='{% url "leadsDatabase:list" %}'>List all available leads</a>
+    </div>
+    <div class="welcomePageLinksContainer">
+        <a class="welcomePageLinks" href='{% url "leadsDatabase:add" %}'>Add new lead</a>
+    </div>
+
+{% endblock %}

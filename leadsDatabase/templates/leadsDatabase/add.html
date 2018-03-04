@@ -1,0 +1,21 @@
+{% extends "leadsDatabase/base.html" %}
+
+{% block mainContainer %}
+
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+
+    <div id="formContainer">
+        <form action="{% url 'leadsDatabase:addResult' %}" method="post">
+            {% csrf_token %}    
+            <label>Name: </label><input type=text name="leadName" id="leadNameInput" value="Manfred Mustermann"/><br />
+            <label>Email: </label><input type="email" name="leadEmail" id="leadEmailInput" value="manfred.mustermann@mustermann.com"/><br />
+            <input id="inputButtonAddLead" type="submit" value="Add new lead" />
+        </form>
+        <form action='{% url "leadsDatabase:index" %}'>
+            <input id="inputButtonGoBack"  type="submit" value="Go back to main page" />
+        </form>
+    </div>
+
+{% endblock %}

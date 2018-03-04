@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'leadsDatabase/style.css' %}" />
+    <title>{% block title %} List or add leads! {% endblock %}</title>
+</head>
+
+<body>
+    <div id="mainContainer">
+        {% block mainContainer %}
+        {% endblock %}
+    </div>
+</body>
+</html>

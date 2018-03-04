@@ -1,0 +1,25 @@
+{% extends "leadsDatabase/base.html" %}
+
+{% block mainContainer %}
+
+    {% if error %}
+        <div class="errorMessages">
+            An error occured.<br />
+            {{ errorMessage }}
+        </div>
+    {% else %}
+        <table class="leadsTable">
+            <tr>
+                <th class="leadTableHeaders">Name</th>
+                <th class="leadTableHeaders">Email adress</th>
+            </tr>
+            <tr>
+                <td class="leadTableEntries">{{ leadName }}</td>
+                <td class="leadTableEntries">{{ leadEmail }}</td>
+            </tr>
+        </table>
+    {% endif %}
+    {% include 'leadsDatabase/inputButtons.html' %}
+{% endblock %}
+
+
