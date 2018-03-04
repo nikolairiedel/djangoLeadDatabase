@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 import os
-from settings_secret import *
+# The secret key was moved and put in .gitignore to be only locally available.
+from djangoApp.settings_secret import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,13 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'af51hnn3w)-85ic#na0$=0@03(aj*c%v^62$pophzd@5@6f%^r'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition
@@ -119,4 +119,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
+
+
+# Further security measures
+# https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
