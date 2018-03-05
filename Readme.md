@@ -25,5 +25,5 @@
 * A style.css is served as a static file and included in the base.html template. It styles all elements of all templates. For a larger project, it would make sense to spread the stylesheet over different files.
 * SQLite is used as a database. In this case we do not need user management, so we don't need to use a more complex database. Performance could be an issue if we had high write volumes, which we probably do not have in this case. It is also natively built into Django and can be accessed with low additional complexity.
 
-### Additional comments are in the code...
+### Additional comments are in the code... See especially files in '/leadsDatabase/'
 
